@@ -1,0 +1,52 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap'); */
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+/* fro my md posts */
+@utility prose {
+  & h1 {
+    @apply text-3xl font-bold mt-8 mb-4;
+  }
+  & h2 {
+    @apply text-2xl font-bold mt-6 mb-3;
+  }
+  & h3 {
+    @apply text-xl font-bold mt-5 mb-2;
+  }
+  & p {
+    @apply my-4;
+  }
+  & ul {
+    @apply list-disc pl-5 my-4;
+  }
+  & li { /* Added li style directly here */
+    @apply mb-2;
+  }
+}
+
+
+/* .codystar-regular {
+  font-family: "Codystar", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+} */
+
+/* body {
+  font-family: "Codystar", sans-serif;
+} */
+
+@font-face {
+  font-family: 'DepartureMono'; 
+  src: url('../public/font/DepartureMono-Regular.woff2') format('woff2'), 
+       url('../public/font/DepartureMono-Regular.woff') format('woff'),
+       url('../public/font/DepartureMono-Regular.otf') format('otf'); 
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
+body {
+  font-family: 'DepartureMono', sans-serif;
+  /* background-color: #f0f0f0; */
+}

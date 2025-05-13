@@ -1,0 +1,44 @@
+---
+title: "inspiration"
+date: "3000-03-15"
+readTime: "999+ min read"
+views: "0 views"
+---
+
+# The Unfiltered Truth About This Website
+
+## I'm Not a Designer
+
+Let me be clear i didn't design this website. Not a single aspect of it. The design is heavily inspired by [<span className="font-semibold text-blue-600">ansubkhan.com</span>](https://ansubkhan.com), which I discovered on Twitter when I was just starting to learn web development (html to be precise).
+
+
+for this i am currently using
+
+- <span className="font-semibold text-teal-600">Next.js</span>
+- <span className="font-semibold text-teal-600">React</span>
+- <span className="font-semibold text-teal-600">TypeScript</span>
+- <span className="font-semibold text-teal-600">Tailwind CSS</span>
+- <span className="font-semibold text-teal-600">MDX/MD parsing</span>
+
+And here we are this is my <span className="font-mono bg-pink-200 px-1 rounded text-2xl">**master copy**</span> of the website.
+
+### Typography
+The font is **[<span className="font-semibold text-purple-600">Departure Mono</span>](https://departuremono.com/)**
+
+### Icons
+Using <span className="font-semibold text-yellow-600">**Font Awesome**</span> for social icons cause <span className="font-semibold text-yellow-600">Lucide</span> deprecated their brand icons
+
+
+### Blog
+instead of using a dedicated database like <span className="font-semibold text-red-600">mongodb</span>(im actively learning it) currently i am using file based approach i have a <span className="font-mono bg-gray-200 px-1 rounded">contnet/posts</span> direcotry where i have all the <span className="font-semibold text-green-600">md</span> and <span className="font-semibold text-green-600">mdx</span> files
+then Processed using:
+   - <span className="font-semibold text-indigo-600">`gray-matter`</span> for frontmatter parsing
+   - <span className="font-semibold text-indigo-600">`remark`</span> for markdown processing
+   - separate separate next.js page handlers for <span className="font-semibold text-green-600">MD</span>/<span className="font-semibold text-green-600">MDX</span>
+   - in the starting i was using <span className="font-semibold text-green-600">md</span> only but then i was just trying to stalk more on the ansubkhan website there i discorverd that he is using <span className="font-semibold text-green-600">mdx</span> so i tried searching it and isntantly loved the perks it holds
+
+### Features i have implemented/going to
+- <span className="font-semibold">Dark/light mode toggle</span>
+- <span className="font-semibold">Newsletter subscription form</span>(just the component i am not planning to go further than this)
+- <span className="font-semibold">View counting</span>(i am reading the guide from the [<span className="underline text-blue-600">https://ansubkhan.com/blogs/view-counter</span>](https://ansubkhan.com/blogs/view-counter) probably add in some time when i get time probabrly around the weekends)
+- <span className="font-semibold">i will also try to implement ppr: partial pre rendering</span> which is mentioned in the above blog so i will probably refer to it.

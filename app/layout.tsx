@@ -32,7 +32,7 @@ export default function RootLayout({
                 alt="Boobachad"
                 width={64}
                 height={64}
-                className="rounded-full hover:shadow-md transition-shadow duration-200"
+                className="grayscale rounded-full hover:shadow-md transition-shadow duration-200"
                 priority={false}
               />
               <div>

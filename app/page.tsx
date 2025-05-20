@@ -156,7 +156,9 @@ export default async function Home() {
               {project.link && (
                 <Link
                   href={project.link}
-                  className="inline-flex items-center mt-2 text-sm text-blue-500 dark:text-blue-400 hover:underline transition-colors duration-200"
+                  className="inline-flex items-center mt-2 text-sm text-blue-500 dark:text-blue-400 hover:
+                  
+                  line transition-colors duration-200"
                 >
                   Learn more <ArrowRight size={14} className="ml-1" />
                 </Link>
@@ -178,7 +180,7 @@ export default async function Home() {
         </div>
         <div className="space-y-4">
           {latestPosts.map((post: CombinedPostMeta) => (
-            <div key={`${post.type}-${post.slug}`} className="flex justify-between items-center border-b pb-2">
+            <div key={`${post.type}-${post.slug}`} className="flex justify-between items-center pb-2">
 
               <Link
                 href={`/blog/${post.type}/${post.slug}`}

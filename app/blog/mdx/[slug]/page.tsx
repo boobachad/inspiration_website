@@ -38,8 +38,7 @@ export default async function MDXBlogPost({ params }: { params: { slug: string }
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <Link href="/blog" className="inline-flex items-center text-sm mb-6 text-gray-700 dark:text-gray-300 hover:underline">
-                <ArrowLeft size={14} className="mr-1" /> BACK TO BLOG
+            <Link href="/blog" className="inline-flex items-center text-xl mb-6 text-gray-700 dark:text-gray-300 hover:underline">#BLOG
             </Link>
 
             <h1 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900 dark:text-gray-100">{frontmatter.title || 'Untitled'}</h1>

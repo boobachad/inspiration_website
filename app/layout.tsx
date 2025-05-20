@@ -37,7 +37,7 @@ export default function RootLayout({
               />
               <div>
                 <h1 className="font-medium text-lg text-gray-900 dark:text-gray-100">Boobachad</h1>
-                <p className="text-sm text-gray-600 dark:text-gray-400">booda & brada</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">booba & chad</p>
               </div>
             </div>
             <div className="flex items-center gap-3">

@@ -1,4 +1,3 @@
-// lib/mdx-posts.ts
 import { promises as fs } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -13,9 +12,9 @@ export interface PostFrontmatter {
     formattedDate: string;
     readTime: string;
     views: string;
+    tags: string[];
     [key: string]: any;
 }
-
 
 async function readPostFile(slug: string): Promise<{ frontmatter: PostFrontmatter; content: string }> {
     try {
@@ -25,13 +24,14 @@ async function readPostFile(slug: string): Promise<{ frontmatter: PostFrontmatte
         const formattedDate = format(new Date(data.date || new Date()), 'MMMM d, yyyy');
 
         const frontmatter: PostFrontmatter = {
+            ...data,
             slug,
             title: data.title || 'Untitled',
             date: data.date || new Date().toISOString(),
             formattedDate,
             readTime: data.readTime || '5 min read',
             views: data.views || '0 views',
-            ...data,
+            tags: data.tags ? data.tags.split(',').map((tag: string) => tag.trim()) : [],
         };
 
         return { frontmatter, content };
@@ -41,11 +41,9 @@ async function readPostFile(slug: string): Promise<{ frontmatter: PostFrontmatte
     }
 }
 
-
 export async function getAllPostsMeta(): Promise<PostFrontmatter[]> {
     try {
         const fileNames = await fs.readdir(postsDirectory);
-
         const postsMeta = await Promise.all(
             fileNames
                 .filter(fileName => fileName.endsWith('.mdx'))
@@ -55,15 +53,12 @@ export async function getAllPostsMeta(): Promise<PostFrontmatter[]> {
                     return frontmatter;
                 })
         );
-
         return postsMeta.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     } catch (error) {
         console.error('Failed to load posts metadata:', error);
         return [];
     }
 }
-
-
 
 export async function getPostData(slug: string): Promise<{ frontmatter: PostFrontmatter; content: string }> {
     return await readPostFile(slug);
